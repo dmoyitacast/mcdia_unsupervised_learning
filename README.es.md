@@ -26,7 +26,7 @@ A partir de un corpus de 3.000 documentos sin etiquetar, descubrir **qué temát
 | **Validación de datos** | Tipos, valores nulos, duplicados, longitud de los documentos y distribución del vocabulario |
 | **TF-IDF** | Cálculo de Term Frequency e Inverse Document Frequency desde cero con pandas |
 | **Transition point** | Suma de TF-IDF por palabra; solo se conserva el **5% superior** (percentil 95): 20.529 → **1.027 palabras** |
-| **Matriz documento-término** | Pivotado a una matriz de 3.000 × 1.027 normalizada por filas |
+| **Matriz documento-término** | Pivotado a una matriz de 3.000 × 1.027 con normalización **L2** por filas (se probó antes L1, la que sugería el enunciado, pero daba clusters desbalanceados y poco interpretables) |
 | **PCA** | Análisis de varianza explicada; **330 componentes** conservan ~70% de la varianza (−68% de dimensiones) |
 | **K-Means** | Comparación de K entre 2 y 14 con inercia (método del codo) y Silhouette; mejor Silhouette en **K = 4** |
 | **Validación** | Proyecciones t-SNE en 2D y 3D, palabras más representativas por cluster y nubes de palabras |

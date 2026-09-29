@@ -26,7 +26,7 @@ Given an unlabelled corpus of 3,000 documents, find out **which topics it contai
 | **Data validation** | Types, missing values, duplicates, document length and vocabulary distribution |
 | **TF-IDF** | Term Frequency and Inverse Document Frequency computed from scratch with pandas |
 | **Transition point** | Aggregate TF-IDF per word; only the **top 5%** (95th percentile) is kept: 20,529 → **1,027 words** |
-| **Document-term matrix** | Pivot to a 3,000 × 1,027 matrix, row-normalised |
+| **Document-term matrix** | Pivot to a 3,000 × 1,027 matrix with **L2** row normalisation (L1, suggested in the brief, was tested first but produced unbalanced, hard-to-interpret clusters) |
 | **PCA** | Explained-variance analysis; **330 components** keep ~70% of the variance (−68% dimensions) |
 | **K-Means** | K from 2 to 14 compared with inertia (elbow) and Silhouette; best Silhouette at **K = 4** |
 | **Validation** | 2D and 3D t-SNE projections, top words per cluster and word clouds |
